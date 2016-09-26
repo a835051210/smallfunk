@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <style>
+        body{
+            position:relative;
+            /*text-align:center;*/
+        }
+        .top{
+            /*position:absolute;*/
+            height:49px;
+            width:1380px;
+            margin:0px auto;
+            background-color:#f7f7f7;
+            color:red;
+            font-weight:bold;
+            /*text-align:center;*/
+            line-height:50px;
+        }
+        .box{ overflow:hidden;
+            height:800px;
+            width:1380px;
+            margin:20px auto;
+            /*transform:translate(-50%,-50%);*/
+            /*position:absolute;*/
+            /*margin:13% 50%;*/
+            /*top:20%;*/
+        }
+        .iconfontSize{
+            font-size:20px;
+            height:49px;
+        }
+        *{ list-style:none; font-family:"微软雅黑"; text-decoration:none; }
+        .box-l{ border:1px solid #cccccc; width:400px; height:500px; margin-top:10px; float:left; }
+        .box-p{ width:950px; height:290px; float:right; color:#fff; border-bottom:1px solid #ccc; }
+        .box-p h2{ color:#222; height:25px; font-size:18px; }
+        .box-p .ner{ width:40px; height:25px; background:#863177; color:#fff; line-height:25px; font-size:12px;
+            text-align:center; margin-right:10px; float:left; font-family:"宋体"; padding-top:6px; }
+        .ot{ color:#e3393c; height:60px; }
+        u{ color:#6388cc; }
+        .ou{ color:#999; margin-bottom:25px; }
+        .ou h4{ font-size:30px; display:inline; color:#c40000; margin-left:6px; }
+        .ou p{ font-size:16px; display:inline; margin-left:30px; color:#c40000; }
+        .tu{ display:inline; margin:0 20px 0 30px; color:#333; }
+        .ty{ color:#6388cc; display:inline; }
+        .tp{ width:50px; height:30px; background:#c40000; display:inline; color:#fff; margin-left:30px; }
+        .tr{ display:inline; color:#333; margin:0 20px 0 20px; }
+        .df{ float:right; width:950px; border-bottom:1px solid #ccc; height:100px; }
+        .er{
+            display:block;
+            /*overflow:hidden;*/
+            /*z-index:999;*/
+            color:#999;
+            width:950px;
+            float:right;
+            margin-top:30px;
+        }
+        .zx{ margin-left:30px; color:#333; }
+        .ey{ width:200px; height:50px; background:#863177; color:#fff; line-height:50px; text-align:center;
+            margin-top:40px; font-size:18px; display:block; }
+        .ey:hover{ background:#b03c9c; }
+        .qw{ height:26px; margin-bottom:25px;
+            line-height:26px;
+            clear:both; }
+        .qe{ color:#999; margin-right:30px; float:left; }
+        .qr{ float:left; border:1px solid #ccc;
+            display:inline;
+            overflow:hidden; }
+        .qt{ line-height:24px; display:inline-block;
+            text-align:center;
+            font-size:22px;
+            width:24px;
+            height:24px;
+            text-decoration:none;
+            background:#f8f8f8; }
+        input{ width:38px;
+            border:none;
+            border:0;
+            border-left:solid 1px #d9d9d9;
+            border-right:solid 1px #d9d9d9;
+            height:24px;
+            line-height:26px;
+            font-size:16px;
+            text-align:center; }
+
+    </style>
+</head>
+<body>
+<div class="top"><i class="iconfont icon-pindan iconfontSize"></i>由于海关系统升级，自9月17日8:00至9月18日8:00期间订单会延时发货，给您造成困扰，敬请谅解！
+</div>
+<div class="box">
+    <div class="box-l"><img id="showImage_" src="imges/521.jpg" alt=""></div>
+    <div class="box-p">
+        <h2><span class="ner">自营</span><span id="name_">施华洛世奇（SWAROVSKI）银色泪滴链坠1023992银白色</span></h2>
+        <div class="ot">更多大牌优惠 只在全球购自营旗舰店 秒杀价不断袭来<u>囤货吧</u></div>
+        <div class="ou">价格
+            <p>¥
+            <h4 id="price_">488.00</h4>
+            </p></div>
+        <div class="ou">税费
+            <div class="tu">需缴纳11.9%跨境电商综合税</div>
+            <div class="ty">税费信息</div>
+        </div>
+        <div class="ou">优惠
+            <div class="tp">团购</div>
+            <div class="tr">购买1-99件时享受优惠</div>
+            <a href="#" class="ty">详情>></a>
+        </div>
+    </div>
+    <div class="df"><img src="imges/1.png" alt=""></div>
+    <div class="er">
+        <div class="qw">
+            <div class="qe">数量</div>
+            <div class="qr">
+                <a href="javascript:void(0)" class="qt">-</a>
+                <input id="num_" value="1">
+                <a href="javascript:void(0)" class="qt">+</a>
+            </div>
+        </div>
+
+        <div>白条 <span class="zx">全球购商品支持30天免息 或 分期支付。</span></div>
+        <a href="gwc.html" class="ey">加入购物车</a>
+    </div>
+
+
+</div>
+</body>
+</html>
+
+<script>
+    // http://localhost:63342/1615/car.html?name=施华洛世奇（SWAROVSKI）银色泪滴链坠1023992银白色&price=520&img=iiiii.jpg
+
+    // window.location.href 获取当前的地址
+    //console.log(window.location.href);
+
+    var OUrl = window.location.href;//获得的地址
+
+    var arrurl = OUrl.split('?');//截取成数组
+    var data = arrurl[1].split('&');
+
+    for(var i = 0; i < data.length; i++){
+        var keyval = data[i].split('=');
+        //拿到标题
+        if(keyval[0] == "name"){
+            $("#name_").text(decodeURIComponent(keyval[1]))
+        }
+
+        //价格
+        if(keyval[0] == "price"){
+            $("#price_").text(decodeURIComponent(keyval[1]) + ".00")
+        }
+        //图片
+        if(keyval[0] == "img"){
+            $("#showImage_").attr("src", "imges/" + decodeURIComponent(keyval[1]))
+        }
+
+
+    }
+
+    $(function(){
+        //左边 贱贱
+        $(".qt").eq(0).on("click", function(){
+
+            var num = $("#num_").val();
+            //如果大于才能 --
+            if(num > 1){
+                num--;
+            }
+
+            $("#num_").val(num);//设置
+        });
+
+        $(".qt").eq(1).on("click", function(){
+
+            var num = $("#num_").val();
+            //如果大于才能 --
+            num++;
+            if(num > 99){
+                alert("库存不足");
+                num = 99;
+                return
+            }
+            $("#num_").val(num);
+        })
+
+
+        $(".ey").on("click", function(){
+            //            e.preventDefault();
+            //            window.location.href=""
+            // 我们在跳转的时候, 让当前的数据保存到 cookie,然后在另外一个页面中去获取这些数据.
+            var $name = $("#name_").text();//名称
+            var $price = $("#price_").text();//价格
+            var $num = $("#num_").val();// 数量
+            var $img = $("#showImage_").attr("src");
+
+            //            console.log($img);
+            var data = $name + "|" + $price + "|" + $num + "|" + $img
+            setCookie($name, data, 7);
+
+        })
+
+    })
+
+
+    // 设置cookie
+    function setCookie(key, value, num){
+        //data 天数
+        var date = new Date();
+        date.setDate(date.getDate() + num);
+        document.cookie = "" + key + "=" + value + ";expires=" + date;
+
+        //         var date = new Date();
+        //         if(Min > 0){
+        //             date.setMinutes(date.getMinutes() + Min);
+        //         }
+        //         document.cookie = "" + key + "=" + val + ";expires=" + date.toString();
+    }
+
+</script>
